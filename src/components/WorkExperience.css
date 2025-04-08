@@ -30,6 +30,8 @@
 }
 
 .timelineInfoBox {
+  width: 100%;
+  max-width: 500px;
   position: absolute;
   width: 280px;
   background: #fff;
@@ -67,19 +69,39 @@
 
 /* Responsive Fixes */
 @media screen and (max-width: 768px) {
+  .timeline {
+    padding: 20px 10px;
+    align-items: center;
+  }
+
   .timelineItem {
+    width: 100%;
     flex-direction: column;
     align-items: center;
+    margin: 20px 0;
+    position: relative;
   }
 
   .timelineInfoBox {
     width: 90%;
-    transform: translateX(-50%) translateY(-50%);
+    max-width: 100%;
+    position: static; /* No absolute on mobile */
+    transform: none;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-top: 20px;
+  }
+
+  .timelineCircle {
+    display: none; /* optional: remove timeline dot for clarity */
   }
 
   .roleCard {
     flex-direction: column;
-    text-align: center;
-    padding: 15px;
+    align-items: flex-start;
+    gap: 6px;
+    padding: 10px 0;
   }
 }
+

@@ -15,7 +15,7 @@ const WelcomeSection = () => {
       </div>
       <div style={styles.imageContainer}>
         <img
-          src="/assets/WelcomePic.jpeg"
+          src={`${process.env.PUBLIC_URL}/assets/WelcomePic.jpeg`}
           alt="Rahul Dahiya"
           style={styles.image}
         />

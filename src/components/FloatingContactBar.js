@@ -32,9 +32,13 @@ const FloatingContactBar = () => {
       <a href="https://www.linkedin.com/in/rahul-dahiya-225917160/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
         <FaLinkedin />
       </a>
-      <a href="/assets/resume.pdf" target="_blank" rel="noopener noreferrer" title="Resume">
-        <FaFileAlt />
-      </a>
+      <a
+        href={`${process.env.PUBLIC_URL}/assets/resume.pdf`}
+        target="_blank"
+        rel="noopener noreferrer"
+        >
+        <FaFileAlt className="icon" />
+       </a>
     </div>
   );
 };

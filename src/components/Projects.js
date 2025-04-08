@@ -8,25 +8,25 @@ const projects = [
     title: "BCP & DR",
     description: "Developed Business Continuity Plan and Disaster Recovery Plan for Queen's College.",
     tech: "DRaaS, VMware, Backup and Recovery, LogicGate, Moqups",
-    image: "/assets/bcp.webp",
+    image: `${process.env.PUBLIC_URL}/assets/bcp.webp`,
   },
   {
     title: "Security Awareness Training",
     description: "Organized various phishing awareness campaigns for 500+ users.",
     tech: "Phish Alert Button, QR code attacks, Microsoft Defender, Phishing Simulations",
-    image: "/assets/Phishing.webp",
+    image: `${process.env.PUBLIC_URL}/assets/Phishing.webp`,
   },
   {
     title: "Infrastructure Maintenance",
     description: "Supervised hardware and software infrastructure of organization.",
     tech: "OPSI, Hybrid Azure Active Directory, Jira, Windows 11",
-    image: "/assets/Hardware.webp",
+    image: `${process.env.PUBLIC_URL}/assets/Hardware.webp`,
   },
   {
     title: "Instructional Design",
     description: "Created multiple instructional design projects.",
     tech: "Camtasia, Adobe Illustrator, Adobe Premiere Pro, Articulate 360, Canva",
-    image: "/assets/Moodle.webp",
+    image: `${process.env.PUBLIC_URL}/assets/Moodle.webp`,
   },
 ];
 

@@ -3,7 +3,7 @@ import "./WorkExperience.css";
 import { FaUserTie, FaBug, FaUserGraduate, FaMedal } from "react-icons/fa";
 
 // Logo path
-const logoUrl = "/assets/queens-logo.png";
+const logoUrl = `${process.env.PUBLIC_URL}/assets/queens-logo.png`;
 
 const rolesAtQueens = [
   {
