@@ -1,0 +1,112 @@
+/* Section container + dim effect */
+.projects-section {
+    padding: 60px 20px;
+    background: linear-gradient(to right, #ffffff, #f8f8f8);
+    text-align: center;
+    transition: background-color 0.3s ease;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* When any card is hovered */
+  .projects-section.overlay-active {
+    background-color: rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Title */
+  .projects-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+    position: relative;
+    z-index: 3;
+  }
+  
+  /* Grid layout */
+  .projects-grid {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: start;
+    position: relative;
+    z-index: 3;
+  }
+  
+  /* Default project card */
+  .project-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    transform: scale(1);
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Highlighted (hovered) project zooms */
+  .project-card.project-zoom {
+    transform: scale(1.2);
+    z-index: 10;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Image setup */
+  .project-image-wrapper {
+    overflow: hidden;
+    height: 180px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+  
+  .project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+  
+  .project-card.project-zoom .project-image {
+    transform: scale(1.1);
+  }
+  
+  .project-content {
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .project-content h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #222;
+  }
+  
+  .project-content p {
+    margin: 8px 0;
+    font-size: 0.95rem;
+    color: #555;
+  }
+  
+
+
+
+  @media screen and (max-width: 768px) {
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .project-card {
+      text-align: center;
+    }
+  
+    .project-image {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  
+  

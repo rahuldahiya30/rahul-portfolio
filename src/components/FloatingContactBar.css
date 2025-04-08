@@ -1,0 +1,56 @@
+.floating-bar {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.6); /* More transparent */
+    backdrop-filter: blur(12px);
+    border-radius: 30px;
+    padding: 10px 25px;
+    display: flex;
+    gap: 24px;
+    z-index: 999;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+  
+  .floating-bar a {
+    color: #333;
+    font-size: 1.4rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .floating-bar a:hover {
+    color: #0077b6;
+    transform: scale(1.15);
+  }
+  
+  /* Scroll fade effect */
+  .floating-bar.hidden {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+    pointer-events: none;
+  }
+  
+  .floating-bar.visible {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  
+
+
+
+
+  @media screen and (max-width: 768px) {
+    .floating-bar {
+      bottom: 15px;
+      padding: 8px 16px;
+      gap: 16px;
+      border-radius: 20px;
+    }
+  
+    .floating-bar a {
+      font-size: 1.2rem;
+    }
+  }
+  
